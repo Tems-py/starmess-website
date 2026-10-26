@@ -1,8 +1,9 @@
-import { languages, selectLanguage, allowedUrl, tiktokId } from './logic.js';
+import { languages, allowedUrl, tiktokId } from './logic.js';
+const assetUrl = image => new URL(`./assets/${image}`, import.meta.url).href;
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
-let config, gallery, releases, catalogs, lang, filter = 'all', visibleReleases = 4, selectedImage = 0, messageType;
+let config, gallery, releases, catalogs, lang, filter = 'all', selectedImage = 0, messageType;
 const t = key => catalogs[lang][key] ?? key;
 const el = (tag, className, text) => {
   const node = document.createElement(tag);
@@ -27,7 +28,6 @@ function renderLanguage() {
   $('meta[property="og:title"]').content = t('pageTitle');
   $('meta[property="og:description"]').content = t('pageDescription');
   $('meta[property="og:locale"]').content = {pl:'pl_PL',en:'en_US',ru:'ru_RU'}[lang];
-  $('#language').value = lang;
   $$('[data-t]').forEach(node => { node.textContent = t(node.dataset.t); });
   $$('[data-label]').forEach(node => { node.setAttribute('aria-label', t(node.dataset.label)); });
   const buy = config.steamMode === 'buy';
@@ -38,7 +38,7 @@ function renderLanguage() {
   $('.final-cta h2').textContent = t(buy ? 'steamBuyTitle' : 'steamTitle');
   $('#steam-note').textContent = t(config.steamUrl ? (buy ? 'steamBuyReady' : 'steamReady') : 'steamSoon');
   $('#current-version').textContent = `${t('version')} ${releases[0].version}`;
-  renderGallery(); renderReleases(); renderTikToks();
+  renderGallery(); renderTikToks();
   if ($('#lightbox').open) updateLightbox();
   if ($('#message-dialog').open && messageType) updateMessage();
 }
@@ -50,7 +50,7 @@ function renderGallery() {
     const caption = t(`gallery.${item.key}`);
     const button = el('button', 'gallery-item');
     button.type = 'button'; button.setAttribute('aria-label', caption);
-    const img = el('img'); img.src = `./assets/${item.image}`; img.alt = caption; img.loading = 'lazy'; img.width = 1280; img.height = 720;
+    const img = el('img'); img.src = assetUrl(item.image); img.alt = caption; img.loading = 'lazy'; img.width = 1280; img.height = 720;
     const label = el('span', 'gallery-caption'); label.append(el('b', '', caption), el('span', '', '↗'));
     label.lastChild.setAttribute('aria-hidden', 'true');
     button.append(img, label);
@@ -60,7 +60,7 @@ function renderGallery() {
 }
 function updateLightbox() {
   const item = gallery[selectedImage];
-  $('#lightbox-image').src = `./assets/${item.image}`;
+  $('#lightbox-image').src = assetUrl(item.image);
   $('#lightbox-image').alt = t(`gallery.${item.key}`);
   $('#lightbox-caption').textContent = `${selectedImage + 1} / ${gallery.length} — ${t(`gallery.${item.key}`)}`;
 }
@@ -69,25 +69,13 @@ function moveImage(direction) {
   selectedImage = indices[(indices.indexOf(selectedImage) + direction + indices.length) % indices.length];
   updateLightbox();
 }
-function renderReleases() {
-  const target = $('#releases'); target.replaceChildren();
-  releases.slice(0, visibleReleases).forEach((release, index) => {
-    const article = el('article', 'release'), head = el('div', 'release-head'), title = el('h3', '', `v${release.version}`);
-    if (index === 0) title.append(el('span', 'release-badge', t('latest')));
-    const time = el('time', '', new Intl.DateTimeFormat(lang, {day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(`${release.date}T12:00:00Z`)));
-    time.dateTime = release.date; head.append(title, time);
-    const list = el('ul'); release.entries[lang].forEach(entry => list.append(el('li', '', entry)));
-    article.append(head, list); target.append(article);
-  });
-  $('#more-releases').hidden = visibleReleases >= releases.length;
-}
 function renderTikToks() {
   const target = $('#tiktok-grid'); target.replaceChildren();
   const placeholders = ['reflection-coop.png', 'iron-gardener-arena.png', 'palace-beveled-corners.png'];
   const clips = config.tiktoks.filter(clip => tiktokId(clip.url));
   (clips.length ? clips : [null, null, null]).forEach((clip, index) => {
     const card = el('article', `clip${clip ? ' has-video' : ''}`);
-    const img = el('img'); img.src = `./assets/${placeholders[index % 3]}`; img.alt = ''; img.loading = 'lazy';
+    const img = el('img'); img.src = assetUrl(placeholders[index % 3]); img.alt = ''; img.loading = 'lazy';
     const content = el('div', 'clip-content'); content.append(el('span', 'clip-icon', clip ? '▷' : '✦'));
     content.append(el('h3', '', clip ? clip.title[lang] : t(`clip${index + 1}Title`)));
     card.append(img, el('div', 'clip-shade'), el('span', 'clip-badge', clip ? 'TIKTOK / STARMESS' : t('clipSoon')), content);
@@ -132,25 +120,18 @@ async function init() {
     read('./data/site.json'), read('./data/gallery.json'), read('./data/releases.json'), ...languages.map(code => read(`./locales/${code}.json`))
   ]);
   catalogs = Object.fromEntries(languages.map((code,index) => [code, catalogs[index]]));
-  let saved; try { saved = localStorage.getItem('starmess-language'); } catch {}
-  lang = selectLanguage(new URL(location.href).searchParams.get('lang'), saved, navigator.language);
+  lang = document.documentElement.lang;
+  const legacyLanguage = new URL(location.href).searchParams.get('lang');
+  if (languages.includes(legacyLanguage)) {
+    location.replace(new URL(`./${legacyLanguage}/${location.hash}`,import.meta.url));
+    return;
+  }
   wireLinks(); renderLanguage(); $('#year').textContent = new Date().getFullYear();
-  $('#language').addEventListener('change', event => {
-    lang = event.target.value;
-    try { localStorage.setItem('starmess-language', lang); } catch {}
-    const url = new URL(location.href); url.searchParams.set('lang', lang); history.replaceState(null, '', url);
-    renderLanguage();
-  });
   $$('[data-filter]').forEach(button => button.addEventListener('click', () => {
     filter = button.dataset.filter;
     $$('[data-filter]').forEach(item => { item.classList.toggle('active', item === button); item.setAttribute('aria-pressed', String(item === button)); });
     renderGallery();
   }));
-  $('#more-releases').addEventListener('click', () => {
-    const previous = visibleReleases; visibleReleases += 6; renderReleases();
-    const heading = $$('#releases h3')[previous];
-    if (heading) { heading.tabIndex = -1; heading.focus({preventScroll:true}); }
-  });
   $('#previous-image').addEventListener('click', () => moveImage(-1));
   $('#next-image').addEventListener('click', () => moveImage(1));
   $('#lightbox').addEventListener('keydown', event => {

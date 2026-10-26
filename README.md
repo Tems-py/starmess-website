@@ -50,7 +50,18 @@ Po premierze ustaw `steamMode` na `buy`, aby przełączyć wszystkie CTA i tekst
 - Dziennik gry: `public/data/releases.json`. Jest wersjonowaną kopią dziennika gry, nie pobiera plików z komputera odwiedzającego.
 - Po nowej wersji gry: `npm run sync:game`, następnie `npm test` i commit strony. Domyślnie importuje katalog gry o poziom wyżej; po przeniesieniu projektu: `node scripts/sync-game.mjs "C:/ścieżka/do/gry"`.
 - Import zachowuje wersję, datę i pełne tłumaczenia z katalogu gry. Nie podbija wersji gry ani nie zapisuje jej plików.
-- Metadane startowe (dla botów nieuruchamiających JS): `public/index.html`. Po wybraniu domeny dodaj tam absolutne `og:image`, `og:url` i canonical; obecnie domena nie jest znana.
+- Build generuje pełne strony `/pl/`, `/en/`, `/ru/`: tłumaczenia, galeria i cała historia zmian są dostępne w HTML bez wykonywania JavaScriptu. Starsze wpisy rozwijają się przez natywne `details`. Katalog główny pokazuje PL z canonical do `/pl/` po skonfigurowaniu adresu.
+- Metadane każdego języka pochodzą z `pageTitle` i `pageDescription` w katalogach tłumaczeń. Nie zmieniaj ręcznie `dist/`.
+
+## SEO i domena
+
+Na GitHub Pages workflow automatycznie przekazuje `steps.pages.outputs.base_url` jako `SITE_URL`. Build generuje wtedy absolutne canonical, wzajemne `hreflang` (w tym `x-default`), `sitemap.xml`, wpis sitemapy w `robots.txt` oraz podglądy Open Graph/Twitter z obrazem gry. Obsługiwane są również adresy z podkatalogiem repozytorium.
+
+Na innym hostingu ustaw `SITE_URL`, np. `https://twoja-domena.pl/`, lub wpisz rzeczywisty adres w `siteUrl` w `public/data/site.json`. Zmienna środowiskowa ma pierwszeństwo. Bez adresu produkcyjnego build lokalny nie wymyśla domeny: generuje `robots.txt` i lokalne odnośniki językowe, ale pomija sitemapę, canonical i absolutne metadane społecznościowe.
+
+Po zmianie domeny zbuduj stronę ponownie. Nie kopiuj sitemapy ze starego hostingu. Przełącznik języka prowadzi do rzeczywistych adresów, bez zależności od cookies lub języka przeglądarki. Stare linki `?lang=en` są obsługiwane przez przekierowanie JS do nowej wersji językowej.
+
+Po publikacji dodaj rzeczywistą domenę do Google Search Console, potwierdź własność i zgłoś `sitemap.xml`. Sprawdź indeksowanie adresów oraz Core Web Vitals/PageSpeed na publicznym hostingu; lokalne testy nie gwarantują pozycji ani wyniku wydajności. Dane strukturalne `VideoGame` opisują grę, bez fikcyjnych ocen, cen i dat premiery. Politykę prywatności odwiedzający znajdzie w stopce.
 
 ## GitHub i automatyczny deploy
 

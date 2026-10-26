@@ -1,5 +1,12 @@
 # Historia zmian strony StarMess
 
+## 1.1.0 — 2026-10-26
+
+- Osobne strony PL/EN/RU z pełną treścią, galerią i changelogiem w HTML.
+- Canonical, hreflang, sitemapa i robots.txt z adresem przekazywanym przez GitHub Pages.
+- Zlokalizowane podglądy udostępniania i dane strukturalne gry.
+- Nawigacja językowa i starsze aktualizacje działają także bez JavaScriptu.
+
 ## 1.0.0 — 2026-10-26
 
 - Landing page PL/EN/RU z opisem gry, galerią i przełączaniem języka.

@@ -1,6 +1,6 @@
 {
   "name": "starmess-website",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,5 +10,7 @@
     "test": "node --test",
     "sync:game": "node scripts/sync-game.mjs"
   },
-  "engines": { "node": ">=22" }
+  "engines": {
+    "node": ">=22"
+  }
 }

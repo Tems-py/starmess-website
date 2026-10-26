@@ -1,11 +1,13 @@
 import { readFile, access } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { validateConfig, languages } from '../public/logic.js';
+import { siteBase } from './render.mjs';
 const publicRoot = new URL('../public/',import.meta.url);
 const json = async file => JSON.parse(await readFile(new URL(file,publicRoot),'utf8'));
 export async function validate() {
   const config = await json('data/site.json');
   const errors = validateConfig(config);
+  siteBase(process.env.SITE_URL ?? config.siteUrl);
   const catalogs = await Promise.all(languages.map(lang => json(`locales/${lang}.json`)));
   const keys = Object.keys(catalogs[0]).sort();
   catalogs.forEach((catalog,index) => {
