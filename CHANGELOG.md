@@ -1,5 +1,11 @@
 # Historia zmian strony StarMess
 
+## 1.1.1 — 2026-10-26
+
+- Konfiguracja deployu Vercel z repozytorium GitHub zastępuje GitHub Pages.
+- Adres produkcyjny Vercel zasila metadane SEO; podglądy mają noindex.
+- Każdy build Vercel uruchamia testy przed publikacją.
+
 ## 1.1.0 — 2026-10-26
 
 - Osobne strony PL/EN/RU z pełną treścią, galerią i changelogiem w HTML.

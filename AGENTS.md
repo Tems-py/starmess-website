@@ -8,6 +8,6 @@ Osobny projekt i repozytorium strony, niezależne od gry nadrzędnej. Zmiany str
 - TikTok iframe ładuje się dopiero po świadomym kliknięciu. Zachowaj link zapasowy do filmu.
 - npm test i npm run build przed commitem zmian funkcjonalnych. Wersja strony i jej CHANGELOG.md są niezależne od wersji gry.
 - dist i node_modules pozostają poza historią. Nie dodawaj plików .local ani zasobów spoza public.
-- GitHub Pages buduje repo strony samodzielnie. Import changelogu gry jest jawny: npm run sync:game.
+- Vercel buduje repo strony przez integrację GitHub i vercel.json. GitHub Actions wykonuje wyłącznie kontrole, bez deployu Pages. Import changelogu gry jest jawny: npm run sync:game.
 - SEO: zachowuj pełny statyczny HTML w /pl/, /en/, /ru/ i prawdziwe linki do języków. Treść galerii i changelogu musi być dostępna bez JS. Nie zastępuj archiwum pobieraniem treści dopiero po kliknięciu.
-- SITE_URL z workflow lub siteUrl w konfiguracji jest źródłem adresów canonical, hreflang, obrazów społecznościowych i sitemapy. Nie wpisuj fikcyjnej domeny. Dane strukturalne nie mogą zawierać wymyślonych ocen, cen ani dat premiery.
+- SITE_URL, siteUrl w konfiguracji lub VERCEL_PROJECT_PRODUCTION_URL jest źródłem adresów canonical, hreflang, obrazów społecznościowych i sitemapy. Podglądy Vercel mają noindex i wskazują canonical produkcji. Nie wpisuj fikcyjnej domeny. Dane strukturalne nie mogą zawierać wymyślonych ocen, cen ani dat premiery.

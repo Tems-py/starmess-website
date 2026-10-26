@@ -10,7 +10,7 @@ const root = fileURLToPath(new URL('../',import.meta.url));
 test('SEO rendering emits translated full HTML and correct metadata under a repository subpath',async () => {
   const output=await mkdtemp(path.join(tmpdir(),'starmess-seo-'));
   try {
-    await renderSite(root,output,'https://example.com/starmess');
+    await renderSite(root,output,'https://example.com/starmess',{});
     const releases=JSON.parse(await readFile(path.join(root,'public/data/releases.json'),'utf8'));
     for(const lang of ['pl','en','ru']) {
       const html=await readFile(path.join(output,lang,'index.html'),'utf8');
@@ -48,7 +48,7 @@ test('SEO rendering emits translated full HTML and correct metadata under a repo
 test('local builds never invent a production domain',async () => {
   const output=await mkdtemp(path.join(tmpdir(),'starmess-local-'));
   try {
-    await renderSite(root,output,'');
+    await renderSite(root,output,'',{});
     const html=await readFile(path.join(output,'en/index.html'),'utf8');
     assert.ok(!html.includes('rel="canonical"'));
     assert.ok(!(await readFile(path.join(output,'robots.txt'),'utf8')).includes('Sitemap:'));

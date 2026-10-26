@@ -1,11 +1,12 @@
 {
   "name": "starmess-website",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
+    "build:vercel": "node scripts/vercel-build.mjs",
     "preview": "node scripts/serve.mjs dist",
     "test": "node --test",
     "sync:game": "node scripts/sync-game.mjs"

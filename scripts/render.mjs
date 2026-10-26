@@ -1,6 +1,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { languages } from '../public/logic.js';
+import { deploymentSiteUrl, isPreview } from './deployment.mjs';
 
 export const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function siteBase(value) {
@@ -9,10 +10,11 @@ export function siteBase(value) {
   if (url.protocol !== 'https:' || url.username || url.password || url.search || url.hash) throw new Error('SITE_URL must be an absolute HTTPS site URL without credentials, query or fragment.');
   return url.href.replace(/\/$/,'') + '/';
 }
-export async function renderSite(root, output, siteUrl) {
+export async function renderSite(root, output, siteUrl, env = process.env) {
   const read = file => readFile(path.join(root,'public',file),'utf8');
   const [template, config, gallery, releases] = await Promise.all([read('index.html'),read('data/site.json').then(JSON.parse),read('data/gallery.json').then(JSON.parse),read('data/releases.json').then(JSON.parse)]);
-  const base = siteBase(siteUrl ?? process.env.SITE_URL ?? config.siteUrl);
+  const base = siteBase(siteUrl ?? deploymentSiteUrl(config, env));
+  const preview = isPreview(env);
   for (const lang of languages) {
     const catalog = JSON.parse(await read(`locales/${lang}.json`));
     const t = key => { if (!catalog[key]) throw new Error(`Missing ${lang}:${key}`); return escapeHtml(catalog[key]); };
@@ -37,7 +39,7 @@ export async function renderSite(root, output, siteUrl) {
     }
     if(config.discordUrl) html = html.replace(/<a ([^>]*data-discord[^>]*)href="#community"/g,`<a $1href="${escapeHtml(config.discordUrl)}" target="_blank" rel="noopener noreferrer"`);
     html = html.replace(/<noscript>[\s\S]*?<\/noscript>/,`<noscript><style>.filters,#privacy-button,[data-discord][href="#community"]{display:none}</style></noscript>`);
-    const localHead = `<meta name="robots" content="index,follow,max-image-preview:large">\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="${t('pageTitle')}">\n<meta name="twitter:description" content="${t('pageDescription')}">`;
+    const localHead = `<meta name="robots" content="${preview ? 'noindex,nofollow' : 'index,follow,max-image-preview:large'}">\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="${t('pageTitle')}">\n<meta name="twitter:description" content="${t('pageDescription')}">`;
     const url = base ? `${base}${lang}/` : '';
     const image = base ? `${base}assets/palace-beveled-corners.png` : '';
     const linkedHead = base ? `<link rel="canonical" href="${escapeHtml(url)}">\n${languages.map(code=>`<link rel="alternate" hreflang="${code}" href="${escapeHtml(`${base}${code}/`)}">`).join('\n')}\n<link rel="alternate" hreflang="x-default" href="${escapeHtml(`${base}pl/`)}">\n<meta property="og:url" content="${escapeHtml(url)}">\n<meta property="og:image" content="${escapeHtml(image)}">\n<meta property="og:image:width" content="1280">\n<meta property="og:image:height" content="720">\n<meta property="og:image:alt" content="${t('gallery.palace')}">\n<meta name="twitter:image" content="${escapeHtml(image)}">` : '';
@@ -48,9 +50,9 @@ export async function renderSite(root, output, siteUrl) {
     await writeFile(path.join(output,lang,'index.html'),localized);
     if(lang==='pl') await writeFile(path.join(output,'index.html'),html);
   }
-  await writeFile(path.join(output,'robots.txt'),`User-agent: *\nAllow: /\n${base?`Sitemap: ${base}sitemap.xml\n`:''}`);
-  if(base) {
+  await writeFile(path.join(output,'robots.txt'),`User-agent: *\nAllow: /\n${base && !preview?`Sitemap: ${base}sitemap.xml\n`:''}`);
+  if(base && !preview) {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${languages.map(lang=>`<url><loc>${escapeHtml(`${base}${lang}/`)}</loc>${languages.map(code=>`<xhtml:link rel="alternate" hreflang="${code}" href="${escapeHtml(`${base}${code}/`)}"/>`).join('')}<xhtml:link rel="alternate" hreflang="x-default" href="${escapeHtml(`${base}pl/`)}"/></url>`).join('')}</urlset>\n`;
     await writeFile(path.join(output,'sitemap.xml'),sitemap);
-  } else console.log('Local build: set SITE_URL (or siteUrl in data/site.json) to generate canonical URLs, social images and sitemap. GitHub Pages supplies it automatically.');
+  } else if (!base) console.log('Local build: set SITE_URL (or siteUrl in data/site.json) to generate SEO URLs. Vercel supplies the production URL automatically.');
 }

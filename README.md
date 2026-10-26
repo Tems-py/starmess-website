@@ -18,7 +18,7 @@ npm run build
 npm run preview
 ```
 
-Build tworzy `dist/`, które można wgrać na dowolny hosting statyczny. Wszystkie ścieżki są względne, więc działa też GitHub Pages pod `/nazwa-repo/`. Źródła strony są w `public/`; nie edytuj wygenerowanego `dist/`.
+Build tworzy `dist/`, które można wgrać na dowolny hosting statyczny. Domyślny hosting to Vercel z automatycznym deployem z GitHuba. Źródła strony są w `public/`; nie edytuj wygenerowanego `dist/`.
 
 ## Steam, Discord i TikTok
 
@@ -55,31 +55,27 @@ Po premierze ustaw `steamMode` na `buy`, aby przełączyć wszystkie CTA i tekst
 
 ## SEO i domena
 
-Na GitHub Pages workflow automatycznie przekazuje `steps.pages.outputs.base_url` jako `SITE_URL`. Build generuje wtedy absolutne canonical, wzajemne `hreflang` (w tym `x-default`), `sitemap.xml`, wpis sitemapy w `robots.txt` oraz podglądy Open Graph/Twitter z obrazem gry. Obsługiwane są również adresy z podkatalogiem repozytorium.
+Na Vercel build automatycznie używa `VERCEL_PROJECT_PRODUCTION_URL` do canonical, `hreflang`, sitemapy i podglądów społecznościowych. Nie potrzebujesz wpisywać domeny podczas pierwszego importu. Pozostaw włączone systemowe zmienne środowiskowe Vercel (Expose System Environment Variables).
 
-Na innym hostingu ustaw `SITE_URL`, np. `https://twoja-domena.pl/`, lub wpisz rzeczywisty adres w `siteUrl` w `public/data/site.json`. Zmienna środowiskowa ma pierwszeństwo. Bez adresu produkcyjnego build lokalny nie wymyśla domeny: generuje `robots.txt` i lokalne odnośniki językowe, ale pomija sitemapę, canonical i absolutne metadane społecznościowe.
+Możesz nadpisać adres przez `SITE_URL` (pełny adres HTTPS) w ustawieniach Vercel lub `siteUrl` w `public/data/site.json`. Kolejność: `SITE_URL`, `siteUrl`, produkcyjna domena Vercel. Nie używamy adresu deploymentu preview jako canonical. Podglądy mają `noindex,nofollow` i nie emitują sitemapy. Lokalny build bez domeny pomija absolutne metadane.
 
 Po zmianie domeny zbuduj stronę ponownie. Nie kopiuj sitemapy ze starego hostingu. Przełącznik języka prowadzi do rzeczywistych adresów, bez zależności od cookies lub języka przeglądarki. Stare linki `?lang=en` są obsługiwane przez przekierowanie JS do nowej wersji językowej.
 
 Po publikacji dodaj rzeczywistą domenę do Google Search Console, potwierdź własność i zgłoś `sitemap.xml`. Sprawdź indeksowanie adresów oraz Core Web Vitals/PageSpeed na publicznym hostingu; lokalne testy nie gwarantują pozycji ani wyniku wydajności. Dane strukturalne `VideoGame` opisują grę, bez fikcyjnych ocen, cen i dat premiery. Politykę prywatności odwiedzający znajdzie w stopce.
 
-## GitHub i automatyczny deploy
+## Vercel + GitHub: automatyczny deploy
 
-Repozytorium lokalne jest gotowe. Zdalne repozytorium i hosting nie zostały jeszcze utworzone.
+Repozytorium: https://github.com/Tems-py/starmess-website . To osobne repo strony, więc katalogiem głównym na Vercel jest **`./`**, nie `website`.
 
-1. Utwórz puste repozytorium GitHub, np. `starmess-website` (bez początkowego README).
-2. W katalogu **website**, nie w repozytorium gry:
+1. Vercel → Add New → Project → Import Git Repository → `Tems-py/starmess-website`.
+2. Zostaw Root Directory `./` i Application/Framework Preset **Other**.
+3. `vercel.json` ustawia Build Command **`npm run build:vercel`** oraz Output Directory **`dist`**. Jeśli włączasz ręczne nadpisanie w panelu, wpisz te same wartości. Nie ustawiaj `public` jako output.
+4. Nie musisz dodawać zmiennych środowiskowych dla pierwszego deployu. Kliknij **Deploy**.
+5. Produkcyjną gałęzią w Settings → Git/Environments powinna być **main**. Każdy push do niej uruchomi aktualizację; pozostałe gałęzie/PR dostaną podglądy zgodnie z ustawieniami Vercel.
 
-   ```sh
-   git remote add origin https://github.com/TWOJ_LOGIN/starmess-website.git
-   git push -u origin main
-   ```
+Vercel przed buildem uruchamia testy. GitHub Actions „Check StarMess website” dodatkowo sprawdza zmiany i pull requesty, ale nie publikuje strony. Nie są potrzebne tokeny Vercel w GitHub Secrets. Dawny workflow GitHub Pages został usunięty; jeżeli Pages był wcześniej włączony, wyłącz jego publikację w Settings → Pages, aby nie utrzymywać starej kopii strony.
 
-3. GitHub → repo → **Settings → Pages → Source: GitHub Actions**.
-4. Uruchom workflow „Deploy StarMess website” ręcznie albo wypchnij kolejny commit do `main`. Workflow sprawdza treść, buduje stronę i publikuje `dist/`.
-5. Kolejne `git push` do `main` automatycznie aktualizują stronę. Ustawienia środowiska `github-pages` mogą wymagać zatwierdzenia zależnie od konfiguracji repozytorium.
-
-Publiczne repozytorium może używać GitHub Pages na darmowym planie; dostępność dla prywatnych repozytoriów zależy od planu. Nie publikuj prywatnych materiałów w publicznym repozytorium.
+Po dodaniu własnej domeny w Vercel ustaw ją jako `SITE_URL` i wykonaj Redeploy, aby jednoznacznie wskazać preferowaną domenę SEO. Nie dodawaj `.vercel/` ani tokenów do repozytorium.
 
 ## Pochodzenie materiałów
 
@@ -88,4 +84,5 @@ Grafiki i kadry: projekt StarMess, `docs/previews/` i `assets/icons/`. Roboto Mo
 ## Dokumentacja integracji
 
 - [Oficjalny TikTok Embed Player](https://developers.tiktok.com/doc/embed-player/)
-- [GitHub Pages: custom workflows](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+- [Vercel: konfiguracja projektu](https://vercel.com/docs/project-configuration/vercel-json)
+- [Vercel: systemowe zmienne środowiskowe](https://vercel.com/docs/environment-variables/system-environment-variables)
