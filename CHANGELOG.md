@@ -1,5 +1,11 @@
 # Historia zmian strony StarMess
 
+## 1.2.1 — 2026-10-26
+
+- Ogólny, krótki opis gry zastępuje wyliczenia funkcji i promocyjne hasła w EN/PL/RU.
+- Usunięto drobne etykiety, dopiski, statystyki i pustą zapowiedź filmów; zwiększono czytelność pozostałego tekstu.
+- TikToki można dodawać jako same linki, bez dodatkowych podpisów.
+
 ## 1.2.0 — 2026-10-26
 
 - Krótsze opisy gry i swobodniejsze teksty EN/PL/RU, z konkretnymi informacjami o prototypie.

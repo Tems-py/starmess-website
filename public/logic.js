@@ -22,6 +22,10 @@ export function validateConfig(config) {
   if (!['wishlist', 'buy'].includes(config.steamMode)) issues.push('steamMode must be wishlist or buy');
   if (!Array.isArray(config.tiktoks)) issues.push('tiktoks must be an array');
   else for (const clip of config.tiktoks) {
+    if (typeof clip === 'string') {
+      if (!tiktokId(clip)) issues.push(`Invalid TikTok URL: ${clip}`);
+      continue;
+    }
     if (!tiktokId(clip.url)) issues.push(`Invalid TikTok URL: ${clip.url}`);
     if (!clip.title || languages.some(lang => typeof clip.title[lang] !== 'string' || !clip.title[lang].trim())) issues.push('TikTok title needs pl/en/ru');
   }

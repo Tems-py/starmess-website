@@ -3,7 +3,7 @@ const assetUrl = image => new URL(`./assets/${image}`, import.meta.url).href;
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
-let config, gallery, releases, catalogs, lang, filter = 'all', selectedImage = 0, messageType;
+let config, gallery, catalogs, lang, filter = 'all', selectedImage = 0, messageType;
 const t = key => catalogs[lang][key] ?? key;
 const el = (tag, className, text) => {
   const node = document.createElement(tag);
@@ -35,9 +35,6 @@ function renderLanguage() {
     if (node.classList.contains('header-cta')) node.textContent = t(buy ? 'buyShort' : 'wishlistShort');
     else node.querySelector('[data-t]').textContent = t(buy ? 'buy' : 'wishlist');
   });
-  $('.final-cta h2').textContent = t(buy ? 'steamBuyTitle' : 'steamTitle');
-  $('#steam-note').textContent = t(config.steamUrl ? (buy ? 'steamBuyReady' : 'steamReady') : 'steamSoon');
-  $('#current-version').textContent = `${t('version')} ${releases[0].version}`;
   renderGallery(); renderTikToks();
   if ($('#lightbox').open) updateLightbox();
   if ($('#message-dialog').open && messageType) updateMessage();
@@ -51,9 +48,7 @@ function renderGallery() {
     const button = el('button', 'gallery-item');
     button.type = 'button'; button.setAttribute('aria-label', caption);
     const img = el('img'); img.src = assetUrl(item.image); img.alt = caption; img.loading = 'lazy'; img.width = 1280; img.height = 720;
-    const label = el('span', 'gallery-caption'); label.append(el('b', '', caption), el('span', '', '↗'));
-    label.lastChild.setAttribute('aria-hidden', 'true');
-    button.append(img, label);
+    button.append(img);
     button.addEventListener('click', () => { selectedImage = index; updateLightbox(); $('#lightbox').showModal(); });
     grid.append(button);
   });
@@ -72,24 +67,20 @@ function moveImage(direction) {
 function renderTikToks() {
   const target = $('#tiktok-grid'); target.replaceChildren();
   const placeholders = ['reflection-coop.png', 'iron-gardener-arena.png', 'palace-beveled-corners.png'];
-  const clips = config.tiktoks.filter(clip => tiktokId(clip.url));
-  if (!clips.length) {
-    const note = el('article', 'devlog-empty');
-    const image = el('img'); image.src = assetUrl('velvet-weaver-arena.png'); image.alt = ''; image.loading = 'lazy';
-    const copy = el('div'); copy.append(el('h3', '', t('clipSoon')), el('p', '', t('clipEmpty')));
-    note.append(image, copy); target.append(note); return;
-  }
-  (clips.length ? clips : [null, null, null]).forEach((clip, index) => {
+  const clips = config.tiktoks.map(clip => typeof clip === 'string' ? {url:clip} : clip).filter(clip => tiktokId(clip.url));
+  if (!clips.length) return;
+  clips.forEach((clip, index) => {
     const card = el('article', `clip${clip ? ' has-video' : ''}`);
     const img = el('img'); img.src = assetUrl(placeholders[index % 3]); img.alt = ''; img.loading = 'lazy';
     const content = el('div', 'clip-content'); content.append(el('span', 'clip-icon', clip ? '▷' : '✦'));
-    content.append(el('h3', '', clip ? clip.title[lang] : t(`clip${index + 1}Title`)));
-    card.append(img, el('div', 'clip-shade'), el('span', 'clip-badge', clip ? 'TIKTOK / STARMESS' : t('clipSoon')), content);
+    if (clip.title?.[lang]) content.append(el('h3', '', clip.title[lang]));
+    card.append(img, el('div', 'clip-shade'), content);
     if (clip) {
       const load = el('button', 'clip-load', t('loadTikTok'));
+      load.title = t('embedPrivacy');
       load.addEventListener('click', () => {
         const iframe = el('iframe'); iframe.src = `https://www.tiktok.com/player/v1/${tiktokId(clip.url)}?autoplay=0&description=1`;
-        iframe.title = clip.title[lang] || t('videoTitle'); iframe.allow = 'fullscreen; encrypted-media; picture-in-picture'; iframe.allowFullscreen = true; iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.title = clip.title?.[lang] || t('videoTitle'); iframe.allow = 'fullscreen; encrypted-media; picture-in-picture'; iframe.allowFullscreen = true; iframe.referrerPolicy = 'strict-origin-when-cross-origin';
         link.classList.add('clip-player-link');
         card.replaceChildren(iframe, link); iframe.focus();
       });
@@ -122,8 +113,8 @@ function wireLinks() {
   if (profile) { $('#tiktok-profile').hidden = false; setExternalLink($('#tiktok-profile'), profile); }
 }
 async function init() {
-  [config, gallery, releases, ...catalogs] = await Promise.all([
-    read('./data/site.json'), read('./data/gallery.json'), read('./data/releases.json'), ...languages.map(code => read(`./locales/${code}.json`))
+  [config, gallery, ...catalogs] = await Promise.all([
+    read('./data/site.json'), read('./data/gallery.json'), ...languages.map(code => read(`./locales/${code}.json`))
   ]);
   catalogs = Object.fromEntries(languages.map((code,index) => [code, catalogs[index]]));
   lang = document.documentElement.lang;

@@ -41,6 +41,8 @@ Edytuj `public/data/site.json`:
 
 Przykład powyżej zawiera placeholdery: zastąp je prawdziwymi danymi przed buildem. Puste linki są obsługiwane i pokazują komunikat „wkrótce”. Nie ma fikcyjnych filmów. TikToki wymagają pełnego linku do publicznego posta; skrócone linki `vm.tiktok.com` najpierw rozwiń. Oficjalny iframe TikTok wczytuje się dopiero po kliknięciu i ma link zapasowy. Bez dostępnego publicznego filmu nie można zweryfikować jego odtwarzania.
 
+Lista `tiktoks` przyjmuje też same pełne URL-e jako ciągi tekstowe, bez podpisów. Obiekt z `url` i `title` służy do filmów z podpisem w trzech językach.
+
 Po premierze ustaw `steamMode` na `buy`, aby przełączyć wszystkie CTA i tekst sekcji Steam na zakup. Cena jest dostępna w Steam. Linki zewnętrzne otwierają nową kartę. TikTok nie jest kontaktowany przed kliknięciem; fonty i grafiki są lokalne.
 
 ## Aktualizowanie treści
