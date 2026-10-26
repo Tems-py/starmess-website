@@ -73,6 +73,12 @@ function renderTikToks() {
   const target = $('#tiktok-grid'); target.replaceChildren();
   const placeholders = ['reflection-coop.png', 'iron-gardener-arena.png', 'palace-beveled-corners.png'];
   const clips = config.tiktoks.filter(clip => tiktokId(clip.url));
+  if (!clips.length) {
+    const note = el('article', 'devlog-empty');
+    const image = el('img'); image.src = assetUrl('velvet-weaver-arena.png'); image.alt = ''; image.loading = 'lazy';
+    const copy = el('div'); copy.append(el('h3', '', t('clipSoon')), el('p', '', t('clipEmpty')));
+    note.append(image, copy); target.append(note); return;
+  }
   (clips.length ? clips : [null, null, null]).forEach((clip, index) => {
     const card = el('article', `clip${clip ? ' has-video' : ''}`);
     const img = el('img'); img.src = assetUrl(placeholders[index % 3]); img.alt = ''; img.loading = 'lazy';

@@ -1,5 +1,11 @@
 # Historia zmian strony StarMess
 
+## 1.2.0 — 2026-10-26
+
+- Krótsze opisy gry i swobodniejsze teksty EN/PL/RU, z konkretnymi informacjami o prototypie.
+- Cieplejsza oprawa, prostsze sekcje i przyciski z pikselowym cieniem.
+- Pusta sekcja TikToka pokazuje jedną zapowiedź zamiast trzech atrap filmów.
+
 ## 1.1.2 — 2026-10-26
 
 - Angielska wersja jest domyślna na stronie głównej i pierwsza w wyborze języka.

@@ -19,7 +19,7 @@ test('Vercel previews resolve SEO URLs to production, with explicit overrides ta
 test('preview HTML has noindex, production canonical and no sitemap',async () => {
   const output=await mkdtemp(path.join(tmpdir(),'starmess-preview-'));
   try {
-    await renderSite(root,output,undefined,{VERCEL:'1',VERCEL_ENV:'preview',VERCEL_PROJECT_PRODUCTION_URL:'game.vercel.app'});
+    await renderSite(root,output,undefined,{VERCEL:'1',VERCEL_ENV:'preview',SITE_URL:'https://game.vercel.app',VERCEL_PROJECT_PRODUCTION_URL:'game.vercel.app'});
     const html=await readFile(path.join(output,'en/index.html'),'utf8');
     assert.ok(html.includes('name="robots" content="noindex,nofollow"'));
     assert.ok(html.includes('rel="canonical" href="https://game.vercel.app/en/"'));
