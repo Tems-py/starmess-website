@@ -1,0 +1,14 @@
+{
+  "name": "starmess-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs dist",
+    "test": "node --test",
+    "sync:game": "node scripts/sync-game.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

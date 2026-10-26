@@ -1,0 +1,8 @@
+[
+  { "image": "palace-beveled-corners.png", "category": "palace", "key": "palace" },
+  { "image": "reflection-coop.png", "category": "bosses", "key": "reflection" },
+  { "image": "iron-gardener-arena.png", "category": "bosses", "key": "gardener" },
+  { "image": "palace-cinematic-library.png", "category": "palace", "key": "library" },
+  { "image": "velvet-weaver-arena.png", "category": "bosses", "key": "weaver" },
+  { "image": "clockwork-chamberlain-arena.png", "category": "bosses", "key": "clockwork" }
+]

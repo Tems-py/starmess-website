@@ -1,0 +1,917 @@
+[
+  {
+    "version": "0.24.0",
+    "date": "2026-10-26",
+    "entries": {
+      "pl": [
+        "Ciało Wielkiego Grzechotnika w tle chowa się za ruinami zamiast urywać w powietrzu.",
+        "Walka z Wielkim Grzechotnikiem ma własną muzykę, syczenie, wyrzut jadu, uderzenia głazów i wyraźne strzały."
+      ],
+      "en": [
+        "The Great Rattlesnake’s distant body disappears behind the ruins instead of ending in mid-air.",
+        "The Great Rattlesnake battle has original music, hisses, venom spits, rock impacts and distinct shots."
+      ],
+      "ru": [
+        "Тело Великого Гремучника на заднем плане скрывается за руинами, а не обрывается в воздухе.",
+        "Бой с Великим Гремучником получил музыку, шипение, плевки ядом, удары валунов и отчётливые звуки выстрелов."
+      ]
+    }
+  },
+  {
+    "version": "0.23.4",
+    "date": "2026-10-26",
+    "entries": {
+      "pl": [
+        "Filmy promocyjne mają wycentrowany obraz i napisy, stałe proporcje oraz płynniejszą kamerę z łagodniejszymi zbliżeniami."
+      ],
+      "en": [
+        "Promotional videos center the picture and captions, preserve proportions and use smoother tracking with gentler zooms."
+      ],
+      "ru": [
+        "Проморолики получили центрированный кадр и подписи, сохранение пропорций и более плавную камеру с мягкими приближениями."
+      ]
+    }
+  },
+  {
+    "version": "0.23.3",
+    "date": "2026-10-25",
+    "entries": {
+      "pl": [
+        "Krawędzie pałacu mają osobny wariant narożny z wysuniętymi blokami kamienia i cofniętymi spoinami."
+      ],
+      "en": [
+        "Palace edges have a dedicated corner-stone variant with projecting blocks and recessed joints."
+      ],
+      "ru": [
+        "Края дворца получили отдельный угловой вариант с выступающими каменными блоками и углублёнными швами."
+      ]
+    }
+  },
+  {
+    "version": "0.23.2",
+    "date": "2026-10-25",
+    "entries": {
+      "pl": [
+        "Ściany, balustrady i fundamenty pałacu mają fazowane kamienne narożniki i cieniowane krawędzie boczne."
+      ],
+      "en": [
+        "Palace walls, railings and foundations have beveled stone corners and shaded side edges."
+      ],
+      "ru": [
+        "Стены, перила и фундаменты дворца получили скошенные каменные углы и затенённые боковые грани."
+      ]
+    }
+  },
+  {
+    "version": "0.23.1",
+    "date": "2026-10-25",
+    "entries": {
+      "pl": [
+        "Usunięto luźno rozmieszczone łuki i kolumny z przejść pałacu.",
+        "Łagodniejsze cienie pałacu i krawędzie kamiennych tekstur."
+      ],
+      "en": [
+        "Removed scattered arches and columns from palace walkways.",
+        "Softer palace shadows and stone texture edges."
+      ],
+      "ru": [
+        "Убраны отдельно стоящие арки и колонны из проходов дворца.",
+        "Более мягкие тени дворца и края каменных текстур."
+      ]
+    }
+  },
+  {
+    "version": "0.23.0",
+    "date": "2026-10-25",
+    "entries": {
+      "pl": [
+        "Materiały promocyjne mają czytelne napisy bezszeryfowe, większy kadr i dynamiczne zbliżenia z miejscem na interfejs TikToka.",
+        "Pięć różnych oryginalnych podkładów towarzyszy filmom PL/EN; zasady kampanii zapisano na przyszłość."
+      ],
+      "en": [
+        "Promo videos use bold sans captions, a larger frame and dynamic zooms with room for TikTok's interface.",
+        "Five distinct original instrumental cues accompany the PL/EN videos; campaign guidelines are saved for future use."
+      ],
+      "ru": [
+        "Проморолики получили жирные подписи без засечек, увеличенный кадр и динамические приближения с местом для интерфейса TikTok.",
+        "Пять разных оригинальных инструментальных треков сопровождают видео PL/EN; правила кампаний сохранены на будущее."
+      ]
+    }
+  },
+  {
+    "version": "0.22.1",
+    "date": "2026-10-25",
+    "entries": {
+      "pl": [
+        "Materiały promocyjne mają krótsze, memiczne teksty i komplet pięciu filmów w wersjach PL/EN, z osobnymi paczkami i wspólnym archiwum."
+      ],
+      "en": [
+        "Promotional clips have shorter meme captions and all five videos in Polish and English, with separate language packs and a combined archive."
+      ],
+      "ru": [
+        "Проморолики получили короткие мемные подписи и все пять видео на польском и английском, с отдельными наборами и общим архивом."
+      ]
+    }
+  },
+  {
+    "version": "0.22.0",
+    "date": "2026-10-25",
+    "entries": {
+      "pl": [
+        "Osobny generator materiałów promocyjnych: pięć montaży na TikToka, zwiastun i screenshoty na Steam z intra, pałacu, Odbicia i Wielkiego Grzechotnika."
+      ],
+      "en": [
+        "Separate promotional generator: five TikTok edits, a Steam trailer and screenshots from the opening, palace, Reflection and Great Rattlesnake."
+      ],
+      "ru": [
+        "Отдельный генератор промоматериалов: пять роликов для TikTok, трейлер и скриншоты для Steam со вступлением, дворцом, Отражением и Великой гремучей змеёй."
+      ]
+    }
+  },
+  {
+    "version": "0.21.0",
+    "date": "2026-10-25",
+    "entries": {
+      "pl": [
+        "Ekwipunek pokazuje obrażenia, odstęp ataków i szybkość pocisku broni.",
+        "Nowa postać dostaje 3 jabłka. Zjedz je w pałacu, aby uzyskać +1 życie na kolejne próby."
+      ],
+      "en": [
+        "Inventory shows weapon damage, attack interval and projectile speed.",
+        "New characters receive 3 apples. Eat them in the palace for +1 life on upcoming attempts."
+      ],
+      "ru": [
+        "Инвентарь показывает урон, интервал атак и скорость снаряда оружия.",
+        "Новый персонаж получает 3 яблока. Ешьте их во дворце для +1 жизни в следующих попытках."
+      ]
+    }
+  },
+  {
+    "version": "0.20.0",
+    "date": "2026-10-25",
+    "entries": {
+      "pl": [
+        "Ekwipunek w pałacu: stały podgląd i otwierane okno z obsługą pada, także dla gracza 2.",
+        "Szalik jako główna broń; szybszy rzut z animowaną bitmapą w kolorze postaci."
+      ],
+      "en": [
+        "Palace inventory: persistent preview and a controller-navigable window, including player 2.",
+        "Scarf equipped as the main weapon; faster throws with an animated bitmap in the character’s color."
+      ],
+      "ru": [
+        "Инвентарь во дворце: постоянная панель и окно с управлением с геймпада, в том числе для игрока 2.",
+        "Шарф выбран основным оружием; более быстрый бросок с анимированным спрайтом цвета персонажа."
+      ]
+    }
+  },
+  {
+    "version": "0.19.4",
+    "date": "2026-10-25",
+    "entries": {
+      "pl": [
+        "Cały szalik w początkowych wspomnieniach zachowuje kolor postaci, także obie końcówki na podłodze i cienie fałd.",
+        "Usunięto przesuwające się poziome i pionowe pasy podczas ruchu obrazów w intro."
+      ],
+      "en": [
+        "The complete scarf in opening memories uses the character's color, including both ends on the floor and shaded folds.",
+        "Removed travelling horizontal and vertical bands during opening picture motion."
+      ],
+      "ru": [
+        "Весь шарф в начальных воспоминаниях сохраняет цвет персонажа, включая оба конца на полу и тени складок.",
+        "Убраны движущиеся горизонтальные и вертикальные полосы при движении изображений во вступлении."
+      ]
+    }
+  },
+  {
+    "version": "0.19.3",
+    "date": "2026-10-25",
+    "entries": {
+      "pl": [
+        "Osiem wejść na areny ma spójne bitmapy pasujące do pałacu: kamień, mosiądz i przygaszone szkło oraz tkaniny; lustro Reflection także jest bitmapowe.",
+        "Przedmioty zachowują proporcje i miejsca, a ich podstawy i cienie pasują do nowych sylwetek."
+      ],
+      "en": [
+        "All eight arena entrances share palace-style bitmap stone, brass and muted glass/textiles, including the Reflection mirror.",
+        "Entrance props keep their proportions and positions, with grounded bases and shadows matching the new silhouettes."
+      ],
+      "ru": [
+        "Все восемь входов на арены получили единый стиль дворца: камень, латунь, приглушённые стекло и ткани; зеркало Reflection тоже использует спрайт.",
+        "Предметы сохраняют пропорции и расположение; основания и тени соответствуют новым силуэтам."
+      ]
+    }
+  },
+  {
+    "version": "0.19.2",
+    "date": "2026-10-25",
+    "entries": {
+      "pl": [
+        "Posadzka ma miękkie cienie przy krawędziach i kolumnach, delikatnie oświetlone brzegi kamiennych płyt oraz głębsze podstopnice.",
+        "Galerie rzucają osobne cienie słupów, cienie łuków pasują do podstaw bitmap, a zacienienie nie rozjaśnia ciemnych sekcji."
+      ],
+      "en": [
+        "Palace floors have soft contact shading at edges and columns, subtly lit stone-slab bevels and deeper stair risers.",
+        "Galleries cast separate pier shadows; arch shadows match bitmap feet, and shading no longer brightens dark sections."
+      ],
+      "ru": [
+        "На полу появились мягкие тени у краёв и колонн, лёгкая подсветка граней каменных плит и более глубокие подступенки.",
+        "Галереи отбрасывают отдельные тени опор; тени арок совпадают с основаниями спрайтов, а затенение не осветляет тёмные секции."
+      ]
+    }
+  },
+  {
+    "version": "0.19.1",
+    "date": "2026-10-25",
+    "entries": {
+      "pl": [
+        "Filary, galerie i balustrady mają izometryczną grubość i ciemniejsze boczne płaszczyzny.",
+        "Łączenia wypadają wewnątrz kamiennych słupków; usunięto przezroczyste marginesy i domknięto ucięte końce odcinków.",
+        "Cała bryła przygasa równomiernie przy postaci, także na pochyłych odcinkach schodów."
+      ],
+      "en": [
+        "Piers, galleries and balustrades have solid isometric thickness and shaded side faces.",
+        "Architectural runs meet inside stone supports; transparent end margins and arbitrary open cuts are closed.",
+        "Each complete structure fades evenly beside the hero, including sloping stair walls."
+      ],
+      "ru": [
+        "Опоры, галереи и балюстрады получили изометрическую толщину и затенённые боковые грани.",
+        "Секции соединяются внутри каменных столбов; убраны прозрачные края и закрыты случайные срезы.",
+        "Вся конструкция равномерно становится прозрачнее рядом с героем, в том числе на наклонных участках лестниц."
+      ]
+    }
+  },
+  {
+    "version": "0.19.0",
+    "date": "2026-10-25",
+    "entries": {
+      "pl": [
+        "Duże, spójne fasady i galerie łączą się z posadzką i schodami; kamień ma drobne pęknięcia i bluszcz, a głębokie filary są częścią całej konstrukcji.",
+        "Cieplejsze światło lamp zastępuje wiszące w pustce smugi; poświata jest delikatniejsza, bez silnego błękitnego filtra.",
+        "Wysuw kamery w dół przy balkonach zmniejszono z 340 do 64 jednostek."
+      ],
+      "en": [
+        "Large connected facades and galleries meet floors and stairs; stone has sparse cracks and ivy, with deep piers built into the full structure.",
+        "Warmer lamp light replaces floating window beams; glow is softer, without the heavy blue filter.",
+        "Downward balcony camera travel is reduced from 340 to 64 units."
+      ],
+      "ru": [
+        "Крупные цельные фасады и галереи соединены с полом и лестницами; на камне есть редкие трещины и плющ, глубокие опоры входят в общую конструкцию.",
+        "Тёплый свет ламп заменяет висящие в пустоте лучи; свечение мягче, без сильного синего фильтра.",
+        "Смещение камеры вниз у балконов уменьшено с 340 до 64 единиц."
+      ]
+    }
+  },
+  {
+    "version": "0.18.0",
+    "date": "2026-10-25",
+    "entries": {
+      "pl": [
+        "Trzy kondygnacje pałacu łączą dwa biegi schodów; kamera podąża za wysokością i odsłania fundamenty przy balkonach.",
+        "Pałac znów lewituje w kosmosie na głębokich fundamentach, przyporach i filarach z widocznymi dolnymi końcami; otwory okien i balustrad są przezroczyste.",
+        "Wspólne narożniki posadzki usuwają szczeliny, zasłaniająca architektura mocniej przygasa, a zamknięte sekcje są znacznie ciemniejsze."
+      ],
+      "en": [
+        "Three palace storeys connect through two stair flights; the camera follows height and reveals foundations at balconies.",
+        "The palace floats in space on deep foundations, buttresses and piers with visible lower ends; window and railing openings reveal the sky.",
+        "Shared floor corners remove gaps, foreground architecture fades more clearly and locked sections are substantially darker."
+      ],
+      "ru": [
+        "Три уровня дворца соединены двумя лестницами; камера следует за высотой и открывает вид на фундамент у балконов.",
+        "Дворец вновь парит в космосе на глубоких фундаментах, контрфорсах и опорах с видимыми нижними концами; проёмы окон и оград прозрачны.",
+        "Общие вершины пола убирают щели, заслоняющая героя архитектура сильнее исчезает, а закрытые секции стали значительно темнее."
+      ]
+    }
+  },
+  {
+    "version": "0.17.0",
+    "date": "2026-10-24",
+    "entries": {
+      "pl": [
+        "Pałac przypomina intro: wysokie bitmapowe okna, kolumny i łuki, błękitna posadzka oraz odległe wieże.",
+        "Eksploracja korzysta z bitmapowych animacji bohatera i kolorów szalika znanych z aren; chłodne światło jest czytelniejsze, bez szumu obrazu."
+      ],
+      "en": [
+        "The palace matches the opening: tall bitmap windows, columns and arches, blue stone floors and distant towers.",
+        "Exploration uses the arena hero's bitmap animations and scarf colors, with clearer cool lighting and no film grain."
+      ],
+      "ru": [
+        "Дворец напоминает вступление: высокие растровые окна, колонны и арки, голубой каменный пол и далёкие башни.",
+        "В исследовании используются растровые анимации героя и цвета шарфа с арен; холодное освещение стало яснее, зернистость убрана."
+      ]
+    }
+  },
+  {
+    "version": "0.16.0",
+    "date": "2026-10-24",
+    "entries": {
+      "pl": [
+        "Nową podróż otwierają wspomnienia otrzymania szalika i przebudzenie w pałacu, w kolorze wybranym dla postaci.",
+        "Intro można wstrzymać i pominąć na padzie; ukończenie zapamiętuje każdy slot. Starsze podróże są kontynuowane bez intro."
+      ],
+      "en": [
+        "New journeys begin with memories of receiving a scarf and awakening in the palace, using the chosen scarf color.",
+        "Pause and skip the opening with a controller; completion is saved per slot. Existing journeys continue without the opening."
+      ],
+      "ru": [
+        "Новое путешествие начинается с воспоминаний о подаренном шарфе и пробуждения во дворце. Шарф сохраняет выбранный цвет.",
+        "Вступление можно приостановить и пропустить с геймпада; завершение хранится в каждом слоте. Старые путешествия продолжаются без вступления."
+      ]
+    }
+  },
+  {
+    "version": "0.15.3",
+    "date": "2026-10-24",
+    "entries": {
+      "pl": [
+        "Ruch w pałacu zachowuje równą prędkość na ekranie i właściwy kierunek skosów, z płynną regulacją prędkości gałką."
+      ],
+      "en": [
+        "Palace movement has consistent screen speed and accurate diagonal directions, with analog stick speed control."
+      ],
+      "ru": [
+        "Движение во дворце сохраняет одинаковую скорость на экране и точное направление по диагонали, с плавной регулировкой скорости стиком."
+      ]
+    }
+  },
+  {
+    "version": "0.15.2",
+    "date": "2026-10-24",
+    "entries": {
+      "pl": [
+        "Aksamitna Prządka atakuje częściej: krótsze zapowiedzi i przerwy, szybsze wahadła oraz zwracane igły.",
+        "W fazie II zapowiedź ściegu nakłada się na ruch wahadeł; zwrócone igły lecą dalej podczas następnego ataku."
+      ],
+      "en": [
+        "Velvet Weaver attacks more often: shorter warnings and breaks, faster pendulums and returned needles.",
+        "Phase II telegraphs a stitch while pendulums swing; returned needles keep flying during the next attack."
+      ],
+      "ru": [
+        "Бархатная Пряха атакует чаще: короче предупреждения и паузы, быстрее маятники и возвращаемые иглы.",
+        "Во второй фазе предупреждение о стежке накладывается на движение маятников; возвращённые иглы продолжают лететь во время следующей атаки."
+      ]
+    }
+  },
+  {
+    "version": "0.15.1",
+    "date": "2026-10-24",
+    "entries": {
+      "pl": [
+        "Porcelanowy Dyrygent: szybsze nuty, partytura i taniec, krótsze przerwy oraz dodatkowe przyspieszenie pocisków w fazie II.",
+        "Wiatr niesie nuty już w fazie I. Zniszczenie ostatniego zagrożenia kończy atak bez czekania na koniec przelotu."
+      ],
+      "en": [
+        "Porcelain Conductor: faster notes, paper and dance, shorter breaks and an additional projectile speed increase in phase II.",
+        "Wind carries notes from phase I. Destroying the last hazard ends the act without waiting for its original flight time."
+      ],
+      "ru": [
+        "Фарфоровый Дирижёр: более быстрые ноты, партитура и танец, короткие паузы и дополнительное ускорение снарядов во второй фазе.",
+        "Ветер несёт ноты уже в первой фазе. Уничтожение последней угрозы завершает атаку без ожидания конца полёта."
+      ]
+    }
+  },
+  {
+    "version": "0.15.0",
+    "date": "2026-10-19",
+    "entries": {
+      "pl": [
+        "Gwiezdny Astrolabista włada podwójnymi gwiazdami, studniami grawitacyjnymi i żywymi konstelacjami; tylko Meridian powtarza znaną rodzinę promienia.",
+        "Dodano bitmapowe obserwatorium, 64 klatki postaci, 48 klatek efektów, animacje dwóch faz i finału oraz cztery osobne dźwięki ataków.",
+        "Planetarium w Galerii Południowej otwiera się po pokonaniu Witrażowego Jelenia. Easy, Normal i co-op zapisują nagrody i statystyki; progresja obejmuje 24 cele."
+      ],
+      "en": [
+        "The Star Astrolabist commands binary stars, gravity wells and living constellations; only the Meridian repeats the familiar beam family.",
+        "Added a bitmap observatory, 64 character cels, 48 effect cels, two-phase and finale animation, and four dedicated attack sounds.",
+        "The south gallery planetarium opens after the Stained-Glass Stag. Easy, Normal and co-op save rewards and statistics; progression now has 24 goals."
+      ],
+      "ru": [
+        "Звёздный Астролябист управляет двойными звёздами, гравитационными колодцами и живыми созвездиями; только Меридиан повторяет знакомое семейство луча.",
+        "Добавлены растровая обсерватория, 64 кадра персонажа, 48 кадров эффектов, анимации двух фаз и финала, а также четыре отдельных звука атак.",
+        "Планетарий в Южной галерее открывается после победы над Витражным Оленем. Лёгкий, нормальный и совместный режимы сохраняют награды и статистику; прогресс включает 24 цели."
+      ]
+    }
+  },
+  {
+    "version": "0.14.0",
+    "date": "2026-10-19",
+    "entries": {
+      "pl": [
+        "Witrażowy Jeleń: fizyczne przejścia w taflach, obracająca się rozeta z prawdziwym bezpiecznym sektorem, echa przechwytujące pociski i jedna znana szarża.",
+        "Dodano bitmapową kaplicę, 64 klatki postaci, 48 klatek efektów, animacje przemiany i finału oraz cztery dźwięki szkła i kopyt.",
+        "Pęknięta rozeta otwiera się po pokonaniu Zegarowego Szambelana. Easy, Normal i co-op zapisują nagrody i statystyki; progresja obejmuje 21 celów."
+      ],
+      "en": [
+        "The Stained-Glass Stag brings physical window openings, a rotating rose with a real safe sector, shot-catching echoes and one familiar charge.",
+        "Added a bitmap chapel, 64 character cels, 48 effect cels, phase/finale animation and four original glass-and-hoof sounds.",
+        "The cracked chapel rose opens after defeating the Clockwork Chamberlain. Easy, Normal and co-op save rewards and statistics; progression now has 21 goals."
+      ],
+      "ru": [
+        "Витражный Олень: физические проходы в стёклах, вращающаяся роза с настоящим безопасным сектором, перехватывающие выстрелы отражения и одна знакомая атака с разбегом.",
+        "Добавлены растровая часовня, 64 кадра персонажа, 48 кадров эффектов, анимации смены фазы и финала, а также четыре звука стекла и копыт.",
+        "Треснувшая роза часовни открывается после победы над Часовым Камергером. Лёгкий, нормальный и совместный режимы сохраняют награды и статистику; прогресс включает 21 цель."
+      ]
+    }
+  },
+  {
+    "version": "0.13.0",
+    "date": "2026-10-19",
+    "entries": {
+      "pl": [
+        "Zegarowy Szambelan: Próba bezruchu, Zaćmienie z osłonami, Przesypanie do klepsydry i Spóźnione dzwony; druga faza łączy ataki.",
+        "Dodano bitmapową galerię zegarów, klatki zapowiedzi, ataków, przemiany i finału oraz ciche dźwięki zegara, piasku i dzwonów.",
+        "Zatrzymany zegar w Galerii Północnej otwiera się po pokonaniu Aksamitnej Prządki. Easy, Normal i co-op zapisują nagrody i statystyki; progresja obejmuje 18 celów."
+      ],
+      "en": [
+        "The Clockwork Chamberlain brings a stillness test, an eclipse with shelters, an hourglass sand trap and delayed bells; phase II pairs the attacks.",
+        "Added a bitmap clock gallery, separate anticipation, attack, phase transition and finale frames, and quiet clock, sand and bell sounds.",
+        "The north gallery's stopped clock opens after defeating the Velvet Weaver. Easy, Normal and co-op save rewards and statistics; progression now has 18 goals."
+      ],
+      "ru": [
+        "Часовой Камергер: испытание неподвижностью, затмение с укрытиями, песочная ловушка и запоздалые колокола; во второй фазе атаки объединяются в пары.",
+        "Добавлены растровая галерея часов, отдельные кадры подготовки, атак, смены фазы и финала, а также тихие звуки часов, песка и колоколов.",
+        "Остановившиеся часы в северной галерее открываются после победы над Бархатной Пряхой. Лёгкий, нормальный и совместный режимы сохраняют награды и статистику; прогресс включает 18 целей."
+      ]
+    }
+  },
+  {
+    "version": "0.12.0",
+    "date": "2026-10-18",
+    "entries": {
+      "pl": [
+        "Aksamitna Prządka: wahadła igieł, niski i wysoki ścieg, zamykające czółenka oraz naparstek przechwytujący strzały; druga faza rozwija skrzydła i zmienia rytm walki.",
+        "Dodano bitmapową salę gobelinów, osobne animacje postaci i narzędzi oraz finał z rozplątaniem nici.",
+        "Rozpruty gobelin w bibliotece otwiera się po pokonaniu Porcelanowego Dyrygenta. Easy, Normal i co-op zapisują nagrody i statystyki; progresja obejmuje 15 celów."
+      ],
+      "en": [
+        "The Velvet Weaver brings swinging needles, low and high stitches, closing shuttles and a thimble that catches shots; phase II unfolds her wings and changes the fight's rhythm.",
+        "Added a bitmap tapestry hall, separate character and tool animations, and a finale that unravels the threads.",
+        "The library's torn tapestry opens after defeating the Porcelain Conductor. Easy, Normal and co-op save rewards and statistics; progression now has 15 goals."
+      ],
+      "ru": [
+        "Бархатная Пряха: качающиеся иглы, низкий и высокий стежок, смыкающиеся челноки и напёрсток, ловящий выстрелы; во второй фазе раскрываются крылья и меняется ритм боя.",
+        "Добавлены растровый зал гобеленов, отдельные анимации персонажа и инструментов, а также финал с распускающимися нитями.",
+        "Распоротый гобелен в библиотеке открывается после победы над Фарфоровым дирижёром. Лёгкий, нормальный и совместный режимы сохраняют награды и статистику; прогресс включает 15 целей."
+      ]
+    }
+  },
+  {
+    "version": "0.11.1",
+    "date": "2026-10-18",
+    "entries": {
+      "pl": [
+        "Odłamki kolców Wielkiego Grzechotnika lecą dwa razy szybciej; jajka mają 1 HP, a małe węże 12 HP.",
+        "Każde jajko wykluwa się po osobnym, losowym czasie 3–5 sekund od lądowania.",
+        "Kałuże jadu zawsze powoli płyną w lewo."
+      ],
+      "en": [
+        "The Great Rattlesnake's shattered spikes travel twice as fast; eggs have 1 HP and hatchlings have 12 HP.",
+        "Each egg hatches after its own random delay of 3–5 seconds on the floor.",
+        "Venom puddles always drift gently left."
+      ],
+      "ru": [
+        "Осколки шипов Великого гремучника летят вдвое быстрее; у яиц 1 HP, у маленьких змей 12 HP.",
+        "Каждое яйцо вылупляется через отдельную случайную задержку в 3–5 секунд после приземления.",
+        "Лужи яда всегда медленно текут влево."
+      ]
+    }
+  },
+  {
+    "version": "0.11.0",
+    "date": "2026-10-18",
+    "entries": {
+      "pl": [
+        "Porcelanowy Dyrygent: powracające nuty, ruchoma partytura, papierowy tancerz odtwarzający trasę i wiatr organów; faza II łączy podmuch z nutami lub papierem.",
+        "Dodano animowany teatr w pixel arcie, wyraziste klatki bossa i ataków, finał z figurką dziecka oraz nowe dźwięki walki.",
+        "Pozytywka w Sali Organowej otwiera się po pokonaniu Wielkiego Grzechotnika. Easy, Normal i co-op zapisują nagrody i statystyki; progresja obejmuje 12 celów."
+      ],
+      "en": [
+        "The Porcelain Conductor brings returning notes, a moving score, a paper dancer replaying your path and organ wind; phase II combines wind with notes or paper.",
+        "Added an animated pixel-art theatre, expressive boss and attack frames, a child-figurine finale and new combat sounds.",
+        "The organ chamber's music box opens after defeating the Great Rattlesnake. Easy, Normal and co-op save rewards and statistics; progression now has 12 goals."
+      ],
+      "ru": [
+        "Фарфоровый дирижёр: возвращающиеся ноты, движущаяся партитура, бумажный танцор, повторяющий путь игрока, и ветер органа; во второй фазе ветер сочетается с нотами или бумагой.",
+        "Добавлены анимированный пиксельный театр, выразительные кадры босса и атак, финал с фигуркой ребёнка и новые звуки боя.",
+        "Шкатулка в органном зале открывается после победы над Великим Гремучником. Лёгкий, нормальный и совместный режимы сохраняют награды и статистику; прогресс включает 12 целей."
+      ]
+    }
+  },
+  {
+    "version": "0.10.0",
+    "date": "2026-10-15",
+    "entries": {
+      "pl": [
+        "Wielki Grzechotnik wyrzuca 1–2 jajka na Easy i 2–4 na Normal. Mają 30 HP i trzęsą się przez 3 sekundy przed wykluciem; zniszczenie jajka zatrzymuje wyklucie.",
+        "Małe węże mają 50 HP, szybko pełzną w stronę gracza i odbijają się od ścian aż do zniszczenia lub końca walki."
+      ],
+      "en": [
+        "Great Rattlesnake launches 1–2 eggs on Easy and 2–4 on Normal. They have 30 HP and shake for 3 seconds before hatching; destroying an egg prevents the hatch.",
+        "Hatchlings have 50 HP, crawl quickly toward a player and keep bouncing off walls until destroyed or the fight ends."
+      ],
+      "ru": [
+        "Великий Гремучник выбрасывает 1–2 яйца на Easy и 2–4 на Normal. У них 30 HP; они трясутся 3 секунды перед вылуплением. Разрушенное яйцо не вылупится.",
+        "Маленькие змеи имеют 50 HP, быстро ползут к игроку и отскакивают от стен до уничтожения или конца боя."
+      ]
+    }
+  },
+  {
+    "version": "0.9.0",
+    "date": "2026-10-14",
+    "entries": {
+      "pl": [
+        "Wielki Grzechotnik ma drugi atak ogonem: dwa duże kolce rozbijają się o podłogę, każdy na dwa małe lecące nisko w lewo i w prawo; na Easy odłamki są wolniejsze."
+      ],
+      "en": [
+        "Great Rattlesnake gains a second tail attack: two large spikes each shatter on the floor into two small spikes travelling left and right; Easy slows the fragments."
+      ],
+      "ru": [
+        "У Великого Гремучника новая атака хвостом: два больших шипа разбиваются о пол, каждый на два маленьких, летящих низко влево и вправо; на Easy осколки медленнее."
+      ]
+    }
+  },
+  {
+    "version": "0.8.0",
+    "date": "2026-10-14",
+    "entries": {
+      "pl": [
+        "W ostatniej fazie Żelaznego Ogrodnika z obu boków areny wyrastają animowane kwiaty: rozkwitają, strzelają złotym pyłkiem w graczy i chowają się; Easy ma łagodniejsze salwy."
+      ],
+      "en": [
+        "Iron Gardener's final phase grows animated flowers from both arena edges: they bloom, fire golden pollen at players and fold away; Easy has gentler volleys."
+      ],
+      "ru": [
+        "В последней фазе Железного Садовника с обоих краёв арены вырастают анимированные цветы: раскрываются, стреляют золотой пыльцой в игроков и прячутся; на Easy залпы мягче."
+      ]
+    }
+  },
+  {
+    "version": "0.7.4",
+    "date": "2026-10-13",
+    "entries": {
+      "pl": [
+        "Jad Wielkiego Grzechotnika ma płynną smugę; kałuże falują i przesuwają refleksy przy zaokrąglonych brzegach."
+      ],
+      "en": [
+        "Great Rattlesnake's venom has a flowing liquid tail; puddles use broad travelling waves and reflections with rounded banks."
+      ],
+      "ru": [
+        "Яд Великого Гремучника тянется жидким шлейфом; по лужам движутся широкие волны и блики, края остаются округлыми."
+      ]
+    }
+  },
+  {
+    "version": "0.7.3",
+    "date": "2026-10-13",
+    "entries": {
+      "pl": [
+        "Przed laserem Wielkiego Grzechotnika iskry zbiegają się w rosnący rdzeń oka, a energia ściska się i wysyła ostatni impuls przed strzałem.",
+        "Usunięto przerwy między animowanymi cierniami i korzeniami Żelaznego Ogrodnika; aktywne pasy roślin są ciągłe i zachowują granice bezpiecznych przejść."
+      ],
+      "en": [
+        "Great Rattlesnake's laser windup gathers sparks into a growing eye core, then compresses the energy with a final pulse before firing.",
+        "Fixed gaps between Iron Gardener's animated thorn and root segments; active plant lanes stay continuous and respect their safe-lane edges."
+      ],
+      "ru": [
+        "Перед лазером Великого Гремучника искры сходятся к растущему ядру в глазу, затем энергия сжимается и посылает последний импульс перед выстрелом.",
+        "Устранены разрывы между анимированными шипами и корнями Железного Садовника; активные полосы растений остаются непрерывными и сохраняют границы безопасных проходов."
+      ]
+    }
+  },
+  {
+    "version": "0.7.2",
+    "date": "2026-10-13",
+    "entries": {
+      "pl": [
+        "Cienki laser Wielkiego Grzechotnika zastąpiono animowanym strumieniem plazmy z jasnym rdzeniem, płomiennymi krawędziami oraz osobnymi rozbłyskami oka i uderzenia w ziemię."
+      ],
+      "en": [
+        "Replaced Great Rattlesnake's thin laser with an animated plasma stream, a bright core, flame-like edges and dedicated eye-charge and ground-impact bursts."
+      ],
+      "ru": [
+        "Тонкий лазер Великого Гремучника заменён анимированным потоком плазмы с ярким ядром, пламенными краями и отдельными вспышками у глаза и при ударе о землю."
+      ]
+    }
+  },
+  {
+    "version": "0.7.1",
+    "date": "2026-10-13",
+    "entries": {
+      "pl": [
+        "Wielki Grzechotnik rzuca kolejno 2–4 głazy z ciała w tle na pierwszy plan, w losowe miejsca z przestrzenią na unik.",
+        "Promień z oka faluje, iskrzy i rozbłyska przy ziemi; uderzenia promienia i głazów krótko wstrząsają ekranem."
+      ],
+      "en": [
+        "Great Rattlesnake throws staggered volleys of 2–4 boulders from its background coils into the foreground, landing at random positions with room to dodge.",
+        "Its eye laser ripples with sparks and a ground flare; beam and boulder impacts add brief screen shake."
+      ],
+      "ru": [
+        "Великий Гремучник поочерёдно бросает 2–4 валуна от тела на заднем плане к переднему, в случайные места с пространством для уклонения.",
+        "Луч из глаза пульсирует, искрит и вспыхивает у земли; удары луча и валунов ненадолго сотрясают экран."
+      ]
+    }
+  },
+  {
+    "version": "0.7.0",
+    "date": "2026-10-13",
+    "entries": {
+      "pl": [
+        "Odświeżono Żelaznego Ogrodnika i szklarnię w spójnym pixel arcie; boss ma 64 klatki ruchu, ataków, rozkwitu, trafień i więdnięcia.",
+        "Dodano animacje nasion, kolczastych kul, sekatora, strąków, rosnących roślin oraz cząsteczek liści i płatków."
+      ],
+      "en": [
+        "Reworked Iron Gardener and its greenhouse in matching pixel art, with 64 boss frames for movement, attacks, flowering, hits and wilting.",
+        "Added animated seeds, thorn balls, shears, pods, growing plants and leaf/petal particles."
+      ],
+      "ru": [
+        "Обновлены Железный Садовник и оранжерея в едином пиксельном стиле: 64 кадра движения, атак, цветения, попаданий и увядания.",
+        "Добавлены анимации семян, колючих шаров, секатора, стручков, растущих растений и частиц листьев и лепестков."
+      ]
+    }
+  },
+  {
+    "version": "0.6.0",
+    "date": "2026-10-11",
+    "entries": {
+      "pl": [
+        "Wielki Grzechotnik ma osobne ciało w tle, ogon przy krawędzi ekranu i głowę z szyją z przodu: 32 klatki i pozy dopasowane do ataków.",
+        "Poprawiono unoszące się efekty: podłoga pokrywa się z kolizją, bąble łączą się z kałużą, a kurz przy stopach szybko osiada."
+      ],
+      "en": [
+        "Great Rattlesnake has separate background coils, a tail at the screen edge and a foreground head/neck, with 32 frames and poses aligned with attacks.",
+        "Fixed floating ground effects: aligned the stone ledge with the collision floor, grounded puddle bubbles and made foot dust settle quickly."
+      ],
+      "ru": [
+        "Великий Гремучник разделён на тело на фоне, хвост у края экрана и голову с шеей спереди: 32 кадра и позы, согласованные с атаками.",
+        "Исправлены парящие эффекты: каменный пол совпадает с коллизией, пузыри соединены с лужей, а пыль у ног быстро оседает."
+      ]
+    }
+  },
+  {
+    "version": "0.5.2",
+    "date": "2026-10-11",
+    "entries": {
+      "pl": [
+        "Odświeżono kamienie, pociski jadu, uderzenia w podłogę i bulgoczące kałuże Wielkiego Grzechotnika: po sześć klatek na efekt.",
+        "Jad obraca się zgodnie z lotem; gruz osiada na podłodze, a rosnące kałuże zachowują zaokrąglone końce."
+      ],
+      "en": [
+        "Reworked Great Rattlesnake's boulders, venom spit, rock impacts and bubbling puddles with six frames per effect.",
+        "Spit follows its flight direction; rubble settles on the floor and puddles keep rounded ends while growing."
+      ],
+      "ru": [
+        "Обновлены камни, плевки ядом, удары о пол и бурлящие лужи Великого Гремучника: по шесть кадров на эффект.",
+        "Яд поворачивается по направлению полёта; обломки оседают на полу, а растущие лужи сохраняют округлые края."
+      ]
+    }
+  },
+  {
+    "version": "0.5.1",
+    "date": "2026-10-11",
+    "entries": {
+      "pl": [
+        "Wielki Grzechotnik ma jedną ciągłą animowaną sylwetkę, wyraźniejsze kły i język; dżunglę uzupełniają omszałe ruiny i wodospad.",
+        "Zapowiedź jadu pozostaje widoczna w fazie II, a ataki wychodzą z miejsc dopasowanych do nowej grafiki."
+      ],
+      "en": [
+        "Great Rattlesnake has one continuous animated silhouette, clearer fangs and tongue; the jungle gains mossy ruins and a waterfall.",
+        "Venom preparation stays visible in phase II, and attack origins follow the revised artwork."
+      ],
+      "ru": [
+        "Великий Гремучник получил цельный анимированный силуэт, более чёткие клыки и язык; в джунглях появились замшелые руины и водопад.",
+        "Подготовка яда видна и во второй фазе, а атаки исходят из точек, соответствующих новой графике."
+      ]
+    }
+  },
+  {
+    "version": "0.5.0",
+    "date": "2026-10-11",
+    "entries": {
+      "pl": [
+        "Wielki Grzechotnik: dwie fazy, kolce, jad, kamienie z tła i promień z oczu.",
+        "Waza we wschodnich krużgankach prowadzi na arenę; Easy, Normal i co-op zapisują nagrody oraz statystyki."
+      ],
+      "en": [
+        "Great Rattlesnake: two phases, spikes, venom, rocks from the background and an eye beam.",
+        "The vase in the east cloister opens the arena; Easy, Normal and co-op save rewards and statistics."
+      ],
+      "ru": [
+        "Великий Гремучник: две фазы, шипы, яд, камни из фона и луч из глаз.",
+        "Ваза в восточной галерее открывает арену; Easy, Normal и кооператив сохраняют награды и статистику."
+      ]
+    }
+  },
+  {
+    "version": "0.4.2",
+    "date": "2026-10-11",
+    "entries": {
+      "pl": [
+        "Skok działa podczas dasha i od razu po nim; czas odnowienia ogranicza tylko kolejny dash."
+      ],
+      "en": [
+        "Jumping works during and immediately after a dash; the cooldown only delays the next dash."
+      ],
+      "ru": [
+        "Прыжок доступен во время рывка и сразу после него; перезарядка ограничивает только следующий рывок."
+      ]
+    }
+  },
+  {
+    "version": "0.4.1",
+    "date": "2026-10-11",
+    "entries": {
+      "pl": [
+        "Naprawiono klawiaturę ekranową: góra/dół zmienia rząd, a lewo/prawo wybiera klawisze oraz akcje edycji i Gotowe."
+      ],
+      "en": [
+        "Fixed on-screen keyboard navigation: up/down changes rows; left/right selects keys, editing actions and Done."
+      ],
+      "ru": [
+        "Исправлена экранная клавиатура: вверх/вниз меняет ряд, влево/вправо выбирает клавиши, действия редактирования и Готово."
+      ]
+    }
+  },
+  {
+    "version": "0.4.0",
+    "date": "2026-10-11",
+    "entries": {
+      "pl": [
+        "ADMIN DEV: podgląd hitboxów mapy, postaci, pocisków, platform i ataków; dostępny także z pauzy walki na padzie."
+      ],
+      "en": [
+        "ADMIN DEV: view map, character, projectile, platform and attack hitboxes; also available from combat pause on a controller."
+      ],
+      "ru": [
+        "ADMIN DEV: хитбоксы карты, персонажей, снарядов, платформ и атак; доступны также из паузы боя на геймпаде."
+      ]
+    }
+  },
+  {
+    "version": "0.3.4",
+    "date": "2026-10-11",
+    "entries": {
+      "pl": [
+        "Naprawiono przypisywanie przycisków pada; dodano LT/L2, RT/R2 i przypisywanie przez naciśnięcie."
+      ],
+      "en": [
+        "Fixed gamepad button assignment; added LT/L2, RT/R2 and assignment by pressing a button."
+      ],
+      "ru": [
+        "Исправлено назначение кнопок геймпада; добавлены LT/L2, RT/R2 и назначение нажатием."
+      ]
+    }
+  },
+  {
+    "version": "0.3.3",
+    "date": "2026-10-11",
+    "entries": {
+      "pl": [
+        "Reflection na Normal chodzi o 15% szybciej: podczas podejścia i ustawiania się przy ścianie."
+      ],
+      "en": [
+        "Reflection walks 15% faster on Normal, when approaching and moving to a wall."
+      ],
+      "ru": [
+        "На Normal Reflection ходит на 15% быстрее при сближении и перемещении к стене."
+      ]
+    }
+  },
+  {
+    "version": "0.3.2",
+    "date": "2026-10-10",
+    "entries": {
+      "pl": [
+        "Finał Reflection na Normal dodaje losowe whip podczas biegu i szybkie, raniące spiny, bez ogłuszeń przy ścianie.",
+        "Na Normal uderzenia w ścianę zrzucają losowo 3–6 głazów, solo i w co-opie.",
+        "Dodatkowe HP wydłuża finał o 30%. Pierwsza faza i balans Easy pozostają bez zmian."
+      ],
+      "en": [
+        "Reflection's Normal final phase adds random running whips and fast damaging spins, without wall stuns.",
+        "Normal wall impacts drop a random 3–6 boulders in solo and co-op.",
+        "Added HP for a 30% longer final phase. The opening phase and Easy balance are unchanged."
+      ],
+      "ru": [
+        "В финальной фазе Reflection на Normal добавлены случайные удары шарфом на бегу и быстрое вращение с уроном, без оглушений у стены.",
+        "На Normal удары о стену сбрасывают случайное число валунов: 3–6, в одиночку и в кооперативе.",
+        "Дополнительное здоровье продлевает финальную фазу на 30%. Первая фаза и баланс Easy не изменены."
+      ]
+    }
+  },
+  {
+    "version": "0.3.1",
+    "date": "2026-10-10",
+    "entries": {
+      "pl": [
+        "Instalator Windows zajmuje mniej niż 10 MB. Zawiera grę, a Javę i biblioteki pobiera podczas instalacji, sprawdzając ich poprawność.",
+        "Przenoszenie zapisów ponawia próbę przy chwilowej blokadzie plików Windows, bez nadpisywania danych."
+      ],
+      "en": [
+        "The Windows installer is under 10 MB. It includes the game and downloads verified Java and libraries during installation.",
+        "Save migration retries temporary Windows file locks without replacing existing data."
+      ],
+      "ru": [
+        "Установщик Windows занимает менее 10 МБ. Игра включена; Java и библиотеки загружаются с проверкой во время установки.",
+        "Перенос сохранений повторяется при временной блокировке файлов Windows без перезаписи данных."
+      ]
+    }
+  },
+  {
+    "version": "0.3.0",
+    "date": "2026-10-10",
+    "entries": {
+      "pl": [
+        "Dodano jeden instalator Windows z ikoną gry, Javą i skrótem w menu Start.",
+        "Zapisy i ustawienia trafiają do AppData i pozostają po aktualizacji oraz odinstalowaniu. Starsze pliki są zachowywane przy przenoszeniu."
+      ],
+      "en": [
+        "Added a single Windows installer with the game icon, Java and a Start menu shortcut.",
+        "Saves and settings now use AppData and survive updates and uninstall. Older files are preserved during migration."
+      ],
+      "ru": [
+        "Добавлен единый установщик Windows со значком игры, Java и ярлыком в меню «Пуск».",
+        "Сохранения и настройки теперь хранятся в AppData и остаются после обновления и удаления игры. Старые файлы сохраняются при переносе."
+      ]
+    }
+  },
+  {
+    "version": "0.2.1",
+    "date": "2026-10-10",
+    "entries": {
+      "pl": [
+        "Whip jest dwa razy szybszy, a animacja szalika poprawnie śledzi rękę.",
+        "Aktywny spin szalikiem trwa o 30% krócej.",
+        "Obaj bossowie mają o 35% więcej HP i proporcjonalne progi faz.",
+        "Spadające z sufitu kamienie są o 50% większe."
+      ],
+      "en": [
+        "Whip attacks are twice as fast, with correctly anchored scarf animation.",
+        "Scarf spin attacks last 30% less time.",
+        "Both bosses have 35% more HP, with phase thresholds scaled accordingly.",
+        "Falling ceiling rocks are 50% larger."
+      ],
+      "ru": [
+        "Атака шарфом стала вдвое быстрее; анимация правильно привязана к руке.",
+        "Вращение шарфа во время атаки длится на 30% меньше.",
+        "У обоих боссов на 35% больше здоровья; пороги фаз изменены пропорционально.",
+        "Падающие с потолка камни стали на 50% крупнее."
+      ]
+    }
+  },
+  {
+    "version": "0.2.0",
+    "date": "2026-10-10",
+    "entries": {
+      "pl": [
+        "Podsumowania obu bossów pokazują czas podejścia, łączny czas walk i zgony.",
+        "Statystyki bossów zapisują się w slocie; migracja zachowuje dotychczasowy progres postaci."
+      ],
+      "en": [
+        "Both bosses' result screens show attempt time, total fighting time and deaths.",
+        "Boss statistics persist per save slot; migration preserves existing character progress."
+      ],
+      "ru": [
+        "Итоги обоих боссов показывают время попытки, общее время боя и смерти.",
+        "Статистика боссов хранится в слоте сохранения; миграция сохраняет прогресс персонажа."
+      ]
+    }
+  },
+  {
+    "version": "0.1.2",
+    "date": "2026-10-09",
+    "entries": {
+      "pl": [
+        "Uproszczono Żelaznego Ogrodnika i rośliny zgodnie ze stylem bohatera.",
+        "Naprawiono chodzenie, strzelanie i lądowanie na platformach.",
+        "Poprawiono proporcje ataków i położenie powierzchni półek."
+      ],
+      "en": [
+        "Simplified the Iron Gardener and plants to match the hero's style.",
+        "Fixed walking, firing and landing animations on platforms.",
+        "Fixed attack proportions and shelf surface alignment."
+      ],
+      "ru": [
+        "Упрощены Железный Садовник и растения в стиле главного героя.",
+        "Исправлены анимации ходьбы, стрельбы и приземления на платформах.",
+        "Исправлены пропорции атак и положение поверхности полок."
+      ]
+    }
+  },
+  {
+    "version": "0.1.1",
+    "date": "2026-10-09",
+    "entries": {
+      "pl": [
+        "Lokalne Git zapisuje historię projektu, bez zapisów gry i wyników kompilacji.",
+        "Dodano zwięzły dziennik zmian w menu głównym, z obsługą pada.",
+        "Aktualna wersja jest widoczna w lewym dolnym rogu menu głównego."
+      ],
+      "en": [
+        "Local Git history now tracks the project, excluding saves and build output.",
+        "Added a compact changelog in the main menu, with gamepad navigation.",
+        "The current version appears in the bottom-left corner of the main menu."
+      ],
+      "ru": [
+        "Локальный Git сохраняет историю проекта, кроме сохранений игры и результатов сборки.",
+        "В главное меню добавлен краткий список изменений с поддержкой геймпада.",
+        "Текущая версия отображается в левом нижнем углу главного меню."
+      ]
+    }
+  }
+]
