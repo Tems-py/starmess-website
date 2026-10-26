@@ -1,5 +1,10 @@
 # Historia zmian strony StarMess
 
+## 1.1.2 — 2026-10-26
+
+- Angielska wersja jest domyślna na stronie głównej i pierwsza w wyborze języka.
+- Polski pozostaje pod /pl/; domyślne odnośniki SEO wskazują wersję angielską.
+
 ## 1.1.1 — 2026-10-26
 
 - Konfiguracja deployu Vercel z repozytorium GitHub zastępuje GitHub Pages.

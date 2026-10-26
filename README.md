@@ -50,7 +50,7 @@ Po premierze ustaw `steamMode` na `buy`, aby przełączyć wszystkie CTA i tekst
 - Dziennik gry: `public/data/releases.json`. Jest wersjonowaną kopią dziennika gry, nie pobiera plików z komputera odwiedzającego.
 - Po nowej wersji gry: `npm run sync:game`, następnie `npm test` i commit strony. Domyślnie importuje katalog gry o poziom wyżej; po przeniesieniu projektu: `node scripts/sync-game.mjs "C:/ścieżka/do/gry"`.
 - Import zachowuje wersję, datę i pełne tłumaczenia z katalogu gry. Nie podbija wersji gry ani nie zapisuje jej plików.
-- Build generuje pełne strony `/pl/`, `/en/`, `/ru/`: tłumaczenia, galeria i cała historia zmian są dostępne w HTML bez wykonywania JavaScriptu. Starsze wpisy rozwijają się przez natywne `details`. Katalog główny pokazuje PL z canonical do `/pl/` po skonfigurowaniu adresu.
+- Build generuje pełne strony `/pl/`, `/en/`, `/ru/`: tłumaczenia, galeria i cała historia zmian są dostępne w HTML bez wykonywania JavaScriptu. Starsze wpisy rozwijają się przez natywne `details`. Katalog główny pokazuje EN z canonical do `/en/`; polski jest dodatkowo pod `/pl/` po skonfigurowaniu adresu.
 - Metadane każdego języka pochodzą z `pageTitle` i `pageDescription` w katalogach tłumaczeń. Nie zmieniaj ręcznie `dist/`.
 
 ## SEO i domena

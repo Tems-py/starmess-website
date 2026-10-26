@@ -43,6 +43,12 @@ test('SEO rendering emits translated full HTML and correct metadata under a repo
     const home=await readFile(path.join(output,'index.html'),'utf8');
     assert.ok(home.includes('href="./en/"'));
     assert.ok(home.includes('src="./app.js"'));
+    assert.ok(home.includes('<html lang="en"'));
+    assert.ok(home.includes('rel="canonical" href="https://example.com/starmess/en/"'));
+    assert.ok(home.includes('hreflang="x-default" href="https://example.com/starmess/en/"'));
+    assert.ok(sitemap.includes('hreflang="x-default" href="https://example.com/starmess/en/"'));
+    assert.ok(!sitemap.includes('hreflang="x-default" href="https://example.com/starmess/pl/"'));
+    assert.ok(home.indexOf('data-language="en"') < home.indexOf('data-language="pl"'));
   } finally {await rm(output,{recursive:true,force:true});}
 });
 test('local builds never invent a production domain',async () => {

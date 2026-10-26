@@ -3,11 +3,11 @@ import assert from 'node:assert/strict';
 import { allowedUrl, selectLanguage, tiktokId, validateConfig } from '../public/logic.js';
 import { validate } from '../scripts/validate.mjs';
 
-test('language: URL wins, saved choice next, browser next, unsupported languages fall back to Polish', () => {
+test('language: URL wins, saved choice next, browser next, unsupported languages fall back to English', () => {
   assert.equal(selectLanguage('ru','pl','en-US'),'ru');
   assert.equal(selectLanguage(null,'en','pl-PL'),'en');
   assert.equal(selectLanguage(null,null,'ru-RU'),'ru');
-  assert.equal(selectLanguage('de','fr','de-DE'),'pl');
+  assert.equal(selectLanguage('de','fr','de-DE'),'en');
 });
 test('external links reject unsafe protocols, credentials and lookalike domains', () => {
   const hosts = ['store.steampowered.com'];

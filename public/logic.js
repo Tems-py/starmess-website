@@ -1,6 +1,7 @@
-export const languages = ['pl', 'en', 'ru'];
+export const defaultLanguage = 'en';
+export const languages = [defaultLanguage, 'pl', 'ru'];
 export function selectLanguage(query, stored, browser) {
-  return [query, stored, browser?.split('-')[0], 'pl'].find(value => languages.includes(value));
+  return [query, stored, browser?.split('-')[0], defaultLanguage].find(value => languages.includes(value));
 }
 export function allowedUrl(value, hosts) {
   if (!value) return '';

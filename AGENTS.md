@@ -10,4 +10,5 @@ Osobny projekt i repozytorium strony, niezależne od gry nadrzędnej. Zmiany str
 - dist i node_modules pozostają poza historią. Nie dodawaj plików .local ani zasobów spoza public.
 - Vercel buduje repo strony przez integrację GitHub i vercel.json. GitHub Actions wykonuje wyłącznie kontrole, bez deployu Pages. Import changelogu gry jest jawny: npm run sync:game.
 - SEO: zachowuj pełny statyczny HTML w /pl/, /en/, /ru/ i prawdziwe linki do języków. Treść galerii i changelogu musi być dostępna bez JS. Nie zastępuj archiwum pobieraniem treści dopiero po kliknięciu.
+- Domyślny język strony to angielski: strona główna i x-default wskazują EN. Polski jest dodatkowy pod /pl/; zachowaj też /ru/.
 - SITE_URL, siteUrl w konfiguracji lub VERCEL_PROJECT_PRODUCTION_URL jest źródłem adresów canonical, hreflang, obrazów społecznościowych i sitemapy. Podglądy Vercel mają noindex i wskazują canonical produkcji. Nie wpisuj fikcyjnej domeny. Dane strukturalne nie mogą zawierać wymyślonych ocen, cen ani dat premiery.

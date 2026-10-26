@@ -1,6 +1,6 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
-import { languages } from '../public/logic.js';
+import { languages, defaultLanguage } from '../public/logic.js';
 import { deploymentSiteUrl, isPreview } from './deployment.mjs';
 
 export const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -42,17 +42,17 @@ export async function renderSite(root, output, siteUrl, env = process.env) {
     const localHead = `<meta name="robots" content="${preview ? 'noindex,nofollow' : 'index,follow,max-image-preview:large'}">\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="${t('pageTitle')}">\n<meta name="twitter:description" content="${t('pageDescription')}">`;
     const url = base ? `${base}${lang}/` : '';
     const image = base ? `${base}assets/palace-beveled-corners.png` : '';
-    const linkedHead = base ? `<link rel="canonical" href="${escapeHtml(url)}">\n${languages.map(code=>`<link rel="alternate" hreflang="${code}" href="${escapeHtml(`${base}${code}/`)}">`).join('\n')}\n<link rel="alternate" hreflang="x-default" href="${escapeHtml(`${base}pl/`)}">\n<meta property="og:url" content="${escapeHtml(url)}">\n<meta property="og:image" content="${escapeHtml(image)}">\n<meta property="og:image:width" content="1280">\n<meta property="og:image:height" content="720">\n<meta property="og:image:alt" content="${t('gallery.palace')}">\n<meta name="twitter:image" content="${escapeHtml(image)}">` : '';
+    const linkedHead = base ? `<link rel="canonical" href="${escapeHtml(url)}">\n${languages.map(code=>`<link rel="alternate" hreflang="${code}" href="${escapeHtml(`${base}${code}/`)}">`).join('\n')}\n<link rel="alternate" hreflang="x-default" href="${escapeHtml(`${base}${defaultLanguage}/`)}">\n<meta property="og:url" content="${escapeHtml(url)}">\n<meta property="og:image" content="${escapeHtml(image)}">\n<meta property="og:image:width" content="1280">\n<meta property="og:image:height" content="720">\n<meta property="og:image:alt" content="${t('gallery.palace')}">\n<meta name="twitter:image" content="${escapeHtml(image)}">` : '';
     const structured = {'@context':'https://schema.org','@type':'VideoGame',name:'StarMess',description:catalog.pageDescription,inLanguage:languages,...(base?{url,image}:{})};
     html = html.replace('</head>',`${localHead}\n${linkedHead}\n<script type="application/ld+json">${JSON.stringify(structured).replaceAll('<','\\u003c')}</script>\n</head>`);
     const localized = html.replaceAll('="./','="../');
     await mkdir(path.join(output,lang),{recursive:true});
     await writeFile(path.join(output,lang,'index.html'),localized);
-    if(lang==='pl') await writeFile(path.join(output,'index.html'),html);
+    if(lang===defaultLanguage) await writeFile(path.join(output,'index.html'),html);
   }
   await writeFile(path.join(output,'robots.txt'),`User-agent: *\nAllow: /\n${base && !preview?`Sitemap: ${base}sitemap.xml\n`:''}`);
   if(base && !preview) {
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${languages.map(lang=>`<url><loc>${escapeHtml(`${base}${lang}/`)}</loc>${languages.map(code=>`<xhtml:link rel="alternate" hreflang="${code}" href="${escapeHtml(`${base}${code}/`)}"/>`).join('')}<xhtml:link rel="alternate" hreflang="x-default" href="${escapeHtml(`${base}pl/`)}"/></url>`).join('')}</urlset>\n`;
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${languages.map(lang=>`<url><loc>${escapeHtml(`${base}${lang}/`)}</loc>${languages.map(code=>`<xhtml:link rel="alternate" hreflang="${code}" href="${escapeHtml(`${base}${code}/`)}"/>`).join('')}<xhtml:link rel="alternate" hreflang="x-default" href="${escapeHtml(`${base}${defaultLanguage}/`)}"/></url>`).join('')}</urlset>\n`;
     await writeFile(path.join(output,'sitemap.xml'),sitemap);
   } else if (!base) console.log('Local build: set SITE_URL (or siteUrl in data/site.json) to generate SEO URLs. Vercel supplies the production URL automatically.');
 }
